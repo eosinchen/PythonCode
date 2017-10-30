@@ -20,8 +20,7 @@ def gcd(m, n):
 
 # Python 不支援 function overload
 # 若有兩個以上相同名稱的 function
-# 也不會出錯
-# 但最後一個會覆蓋前者的定義
+# 則最後一個會覆蓋前者的定義
 
 def sum(a, b):
     return a + b
@@ -109,8 +108,8 @@ def fib_recursive(n):
 # TypeError: sum() missing 1 required positional argument: 'c'
 #print(sum(10, 20))
 
-# 在呼叫函式時，並不一定要依參數宣告順序來傳入引數
-# 可以指定參數名稱來設定其引數值，稱之為關鍵字引數
+# 在呼叫函式時，並不一定要依參數宣告順序來傳入參數
+# 可以指定參數名稱來設定其引數值，稱之為關鍵字參數
 #print(sum(c = 50, a = 45, b = 63))
 
 # 觀察以下的執行情況
@@ -141,5 +140,5 @@ def fib_recursive(n):
 #selection(number)
 #print(number)
 
-#
+# 以遞迴方式呼叫
 print(fib_recursive(40))
