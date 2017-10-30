@@ -85,6 +85,42 @@ def while_basic_break():
         print(x)
         if x == 6: break
 
+# 費氏函數 - loop 版
+def fib_loop(n):
+
+    # 用來存放最終值
+    sum_final = 1
+    # 用來存放前一個的值
+    sum_prev_1 = 0
+    # 用來存放前兩個的值
+    sum_prev_2 = 0
+    # 數值移動時，暫存之用
+    sum_temp = 0
+
+    # 進行 n < 0, n == 0, n == 1 的處理
+    if (n < 0):
+        print("請輸入 0 以上的整數")
+        return
+
+    if (n == 0):
+        return sum_prev_2
+
+    if (n == 1):
+        return sum_prev_1
+
+    # 利用迴圈進行數值運算
+    for i in range(2, n + 1):
+        sum_temp = sum_final
+        sum_final = sum_final + sum_prev_1
+        sum_prev_2 = sum_prev_1
+        sum_prev_1 = sum_temp
+        # 顯示每一個階段的結果，以便除錯
+        # 正式程式中，此行需移除
+        print(str(i) + " => " +str(sum_final) + ", " + str(sum_prev_1) + ", " + str(sum_prev_2) + ", " + str(sum_temp))
+
+    return sum_final
+
+
 # 主程式
 #while_basic()
 
@@ -100,4 +136,6 @@ def while_basic_break():
 
 #for_nested_continue()
 
-while_basic_break()
+#while_basic_break()
+
+fib_loop(300)
