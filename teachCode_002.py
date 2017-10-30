@@ -138,4 +138,4 @@ def fib_loop(n):
 
 #while_basic_break()
 
-fib_loop(300)
+fib_loop(100)
