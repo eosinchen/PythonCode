@@ -5,7 +5,7 @@
 
 # 使用 post 和 get 來存取資料
 
-# firebase package 要先安裝
+# 要先安裝 firebase package
 # 使用: pip install firebase
 
 # 在本程式中引入 firebase 套件
