@@ -1,3 +1,5 @@
+# _*_ coding: utf-8 _*_
+
 # if-elif-else 練習
 # By Eosin Chen(eosinchen@gmail.com)
 

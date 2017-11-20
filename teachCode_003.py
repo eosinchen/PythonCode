@@ -1,3 +1,5 @@
+# _*_ coding: utf-8 _*_
+
 # 函數 練習
 # By Eosin Chen(eosinchen@gmail.com)
 
