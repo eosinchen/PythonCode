@@ -2,14 +2,20 @@
 #
 # Firebase 使用完整範例
 # 統一發票號碼維護
+# 加入使用者驗證
 #
 
 from firebase import firebase
 
 # 在此輸入各自的 Firebase DB URL
 db_url = 'https://python01.firebaseio.com'
-fdb = firebase.FirebaseApplication(db_url, None)
 
+# 認證資訊
+auth = firebase.FirebaseAuthentication('****', 'skynet.tw@gmail.com',
+    extra={'eAuth': 'GX453Q3U7hTqjvtCnSf****BX8Fa8kI3v7f4gWNN'})
+
+# 在此存入認證資訊
+fdb = firebase.FirebaseApplication(db_url, auth)
 
 def disp_menu():
     print('統一發票號碼管理')
@@ -21,7 +27,6 @@ def disp_menu():
     print('-------------')
     ans = input('您的選擇：')
     return int(ans)
-
 
 def enter_lotto():
     while True:
@@ -101,7 +106,6 @@ def del_lotto():
     if ans == 'y' or ans == 'Y':
         fdb.delete('/invlotto/'+target, None)
 
-# 主程式 -------------------------------------------------------------------------
 while True:
     ans = disp_menu()
     if ans == 1:
